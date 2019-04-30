@@ -1,0 +1,51 @@
+<form [formGroup]="form">
+    <div fxLayout="column" fxLayoutGap="15px">
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="First name" formControlName="firstName">
+        <mat-error class="mat-caption mat-text-warn" *ngIf="form.controls['firstName'].hasError('required') && form.controls['firstName'].touched">
+          <mat-icon class="mr-1">warning</mat-icon>
+          <span>First name is required</span>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Last name" formControlName="lastName">
+        <mat-error class="mat-caption mat-text-warn" *ngIf="form.controls['lastName'].hasError('required') && form.controls['lastName'].touched">
+          <mat-icon class="mr-1">warning</mat-icon>
+          <span>Last name is required</span>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Email" formControlName="email">
+        <mat-error class="mat-caption mat-text-warn" 
+          *ngIf="(form.controls['email'].hasError('required') && form.controls['email'].touched) ||
+          (form.controls['email'].invalid && form.controls['email'].touched)">
+          <mat-icon class="mr-1">warning</mat-icon>
+          <span>Email is required.</span>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" formControlName="password">
+        <mat-error class="mat-caption mat-text-warn" *ngIf="form.controls['password'].hasError('minlength') || form.controls.password.hasError('maxlength') || form.controls.password.hasError('pattern')">
+          <mat-icon class="mr-1">warning</mat-icon>
+          <span>Password must be between 8 and 25 characters and contain letters, numbers and at least 1 special character.</span>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Confirm password" formControlName="confirm">
+        <mat-error class="mat-caption mat-text-warn" *ngIf="form.hasError('passwordMismatch') && form.controls['confirm'].invalid && form.controls['confirm'].touched">
+          <mat-icon class="mr-1">warning</mat-icon>
+          <span>Passwords must match</span>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  </form>

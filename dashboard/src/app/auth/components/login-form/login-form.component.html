@@ -1,0 +1,20 @@
+<form [formGroup]="form" fxLayout="column">
+  <div fxLayout="row">
+    <mat-form-field fxLayoutAlign="center center"> 
+      <input matInput placeholder="Email" formControlName="email">
+      <mat-error class="mat-caption mat-text-warn" *ngIf="form.controls['email'].hasError('email') && form.controls['email'].touched">
+        <mat-icon>warning</mat-icon>
+        Please enter a valid email.
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div fxLayout="row">
+    <mat-form-field fxLayoutAlign="center center"> 
+      <input matInput type="password" placeholder="Password" formControlName="password">
+      <mat-error class="mat-caption mat-text-warn" *ngIf="form.controls['password'].hasError('required') && form.controls['password'].touched">
+        <mat-icon>warning</mat-icon>
+        Please enter your password.
+      </mat-error>
+    </mat-form-field>
+  </div>
+</form>

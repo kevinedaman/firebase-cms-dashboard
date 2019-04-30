@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyCOOXhZ566k1Ffzod-sPEvYj7CQAucXPUE',
+    authDomain: 'springz-official.firebaseapp.com',
+    databaseURL: 'https://springz-official.firebaseio.com',
+    projectId: 'springz-official',
+    storageBucket: 'springz-official.appspot.com',
+    messagingSenderId: '1039786441123'
+  }
 };
 
 /*

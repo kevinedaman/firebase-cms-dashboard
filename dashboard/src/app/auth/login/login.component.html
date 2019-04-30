@@ -1,0 +1,12 @@
+<div class="wrapper justify-center align-center">
+  <mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+      <app-login-form [form]="form"></app-login-form>
+    </mat-card-content>
+    <div class="justify-around">
+      <button mat-raised-button color="primary" (click)="signIn()">LOGIN</button>
+      <button mat-raised-button (click)="signup()">SIGNUP</button>
+    </div>
+  </mat-card>
+</div>

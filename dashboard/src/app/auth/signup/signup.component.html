@@ -1,0 +1,12 @@
+<div class="wrapper justify-center align-center">
+    <mat-card class="mb-3 login-card">
+      <mat-card-title>Register</mat-card-title>
+      <mat-card-content>
+        <app-signup-form [form]="form"></app-signup-form>
+      </mat-card-content>
+      <div class="justify-around">
+        <button mat-raised-button color="primary" (click)="goBack()">Cancel</button>
+        <button mat-raised-button (click)="register()">Register</button>
+      </div>
+    </mat-card>
+  </div>
