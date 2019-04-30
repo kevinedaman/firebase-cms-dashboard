@@ -1,3 +1,28 @@
-<p>
-  button works!
-</p>
+<div *ngIf="accent; else primary">
+  <button 
+      mat-raised-button 
+      color="accent" 
+      *ngIf="accent" 
+      (click)="handleClick.emit($event)" 
+      class="button-secondary"
+      [disabled]="disabled"
+  >
+      <ng-container *ngTemplateOutlet="text"></ng-container>
+  </button>
+</div>
+
+<ng-template #primary>
+  <button 
+      mat-button 
+      class="button" 
+      (click)="handleClick.emit($event)"
+      [disabled]="disabled"
+  >
+      <ng-container *ngTemplateOutlet="text"></ng-container>
+      
+  </button>
+</ng-template>
+
+<ng-template #text>
+  <span><ng-content></ng-content></span>
+</ng-template>
