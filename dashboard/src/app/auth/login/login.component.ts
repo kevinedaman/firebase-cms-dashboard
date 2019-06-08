@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
   }
 
   signup() {
-    this.router.navigate(['/', 'auth', 'signup']);
+    this.router.navigate(['/', 'signup']);
   }
 
   showErrorModal() {

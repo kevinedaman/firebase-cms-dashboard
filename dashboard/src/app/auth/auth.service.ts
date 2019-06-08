@@ -17,6 +17,7 @@ export class AuthService {
 
   private authState = new BehaviorSubject<FirebaseUser>(null);
   public readonly auth = this.authState.asObservable();
+
   private userState = new BehaviorSubject<User>(null);
   public readonly user = this.userState.asObservable();
 

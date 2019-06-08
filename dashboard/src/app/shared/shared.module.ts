@@ -22,6 +22,9 @@ import { AppRoutingModule } from '../app-routing.module';
   ],
   exports: [
     MaterialModule,
+  ],
+  entryComponents: [
+    AlertComponent,
   ]
 })
 export class SharedModule { }
