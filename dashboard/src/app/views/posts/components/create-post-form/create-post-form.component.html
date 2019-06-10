@@ -1,0 +1,8 @@
+<div [formGroup]="form" class="container pad__20px">
+  <mat-form-field>
+    <input matInput required formControlName="title" placeholder="Post Title">
+  </mat-form-field>
+  <div class="editor-wrapper pad-t__20px">
+    <editor formControlName="content" [init]="editorConfig"></editor>
+  </div>
+</div>

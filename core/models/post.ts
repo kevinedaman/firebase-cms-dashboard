@@ -8,7 +8,7 @@ export class Post implements PostDTO {
     id: string;
     lastUpdatedOn: firestore.Timestamp;
 
-    name: string;
+    title: string;
     author: string;
     permalink: string;
     published: boolean;

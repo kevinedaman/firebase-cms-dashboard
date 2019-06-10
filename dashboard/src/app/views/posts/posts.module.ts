@@ -8,6 +8,7 @@ import { PostsComponent } from './posts.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CreatePostFormComponent } from './components/create-post-form/create-post-form.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
     PostsComponent,
     PostsTableComponent,
     CreatePostComponent,
+    CreatePostFormComponent,
   ],
   exports: [
     RouterModule,
