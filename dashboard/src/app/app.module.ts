@@ -14,12 +14,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
-import { PostsComponent } from './views/posts/posts.component';
+import { LayoutComponent } from './layout/layout.component';
+import { NavDrawerComponent } from './layout/nav-drawer/nav-drawer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent
+    LayoutComponent,
+    NavDrawerComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

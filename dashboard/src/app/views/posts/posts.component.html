@@ -1,3 +1,9 @@
-<p>
-  posts works!
-</p>
+<div class="container">
+  <div class="header-wrapper">
+    <h1>Posts</h1>
+    <app-button (handleClick)="router.navigate(['/', 'posts', 'create'])">Add New</app-button>
+  </div>
+  <div class="posts-wrapper">
+    <app-posts-table></app-posts-table>
+  </div>
+</div>

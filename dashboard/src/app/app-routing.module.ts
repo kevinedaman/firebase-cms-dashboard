@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LayoutComponent } from './shared/layout/layout.component';
+import { LayoutComponent } from './layout/layout.component';
 import { AuthGuard } from './auth/auth.guard';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { PostsComponent } from './views/posts/posts.component';
 
 const routes: Routes = [
   {
@@ -14,8 +13,8 @@ const routes: Routes = [
     children: [
       {
         path: 'posts',
-        component: PostsComponent,
-      }
+        loadChildren: './views/posts/posts.module#PostsModule',
+      },
     ]
   },
   {
