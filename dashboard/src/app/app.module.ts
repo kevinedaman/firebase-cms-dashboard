@@ -16,6 +16,8 @@ import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
 import { LayoutComponent } from './layout/layout.component';
 import { NavDrawerComponent } from './layout/nav-drawer/nav-drawer.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,9 @@ import { NavDrawerComponent } from './layout/nav-drawer/nav-drawer.component';
     AngularFireAuthModule,
     BrowserModule,
     BrowserAnimationsModule,
+    EditorModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     SharedModule,
     AuthModule,

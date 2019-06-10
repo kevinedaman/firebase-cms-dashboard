@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-post.component.scss']
 })
 export class CreatePostComponent implements OnInit {
+  post;
+
+  editorConfig = {
+    height: 500,
+  };
 
   constructor() { }
 

@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../shared/shared.module';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 import { PostsTableComponent } from './components/posts-table/posts-table.component';
 import { PostsComponent } from './posts.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -34,6 +36,9 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     SharedModule,
+    EditorModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class PostsModule { }
