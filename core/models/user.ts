@@ -1,9 +1,8 @@
 import { firestore } from 'firebase';
 
-import { FirestoreDTO } from '../dto/firestore';
 import { UserDTO } from '../dto/user';
 
-export class User implements UserDTO, FirestoreDTO {
+export class User implements UserDTO {
     archived: boolean;
     createdBy: string;
     createdOn: firestore.Timestamp;
