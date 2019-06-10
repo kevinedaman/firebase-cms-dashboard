@@ -19,7 +19,7 @@ export class FirestoreService {
     private authService: AuthService,
     private path: string,
   ) {
-    this.collection = this.afs.collection(path);
+    this.collection = this.afs.collection(this.path);
   }
 
   public get(docId: string): Observable<any> {

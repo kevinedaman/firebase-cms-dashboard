@@ -1,3 +1,4 @@
 export enum CollectionPaths {
-    users = 'users'
+    users = 'users',
+    posts = 'posts',
 }

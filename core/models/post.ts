@@ -1,5 +1,5 @@
 import { firestore } from 'firebase';
-import { PostDTO } from 'dto/post';
+import { PostDTO } from '../dto/post';
 
 export class Post implements PostDTO {
     archived: boolean;

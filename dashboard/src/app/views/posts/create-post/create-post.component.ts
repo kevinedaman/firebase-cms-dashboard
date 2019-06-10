@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { takeUntil, map } from 'rxjs/operators';
 import { CreatePostFormComponent } from '../components/create-post-form/create-post-form.component';
 import { Subject } from 'rxjs';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-create-post',
@@ -16,7 +17,8 @@ export class CreatePostComponent implements OnInit, OnDestroy {
   public editing = false;
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private postService: PostService,
   ) {}
 
   ngOnInit() {
@@ -44,6 +46,7 @@ export class CreatePostComponent implements OnInit, OnDestroy {
   submit() {
     const { value } = this.form;
     console.log('in submit', value);
+    this.postService.create(value);
   }
 
 }

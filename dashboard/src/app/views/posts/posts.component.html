@@ -4,6 +4,6 @@
     <app-button (handleClick)="router.navigate(['/', 'posts', 'create'])">Add New</app-button>
   </div>
   <div class="posts-wrapper">
-    <app-posts-table></app-posts-table>
+    <app-posts-table *ngIf="posts.length > 0" [posts]="posts"></app-posts-table>
   </div>
 </div>
