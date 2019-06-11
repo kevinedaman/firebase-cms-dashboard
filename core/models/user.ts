@@ -14,10 +14,14 @@ export class User implements UserDTO {
     lastName: string;
 
     public constructor(properties?: any) {
-    if (properties) {
-      Object.keys(properties).forEach((key) => {
-        this[key] = properties[key];
-      });
+      if (properties) {
+        Object.keys(properties).forEach((key) => {
+          this[key] = properties[key];
+        });
+      }
     }
-  }
+
+    get fullName() {
+      return this.firstName + ' ' + this.lastName;
+    }
 }

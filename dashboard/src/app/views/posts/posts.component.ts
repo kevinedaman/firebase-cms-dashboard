@@ -21,4 +21,8 @@ export class PostsComponent implements OnInit {
     this.postService.posts.subscribe(posts => this.posts = posts);
   }
 
+  handleView(e) {
+    this.router.navigate(['/', 'posts', 'create', e.id]);
+  }
+
 }

@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'create',
     component: CreatePostComponent,
+  },
+  {
+    path: 'create/:id',
+    component: CreatePostComponent,
   }
 ];
 

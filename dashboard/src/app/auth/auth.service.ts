@@ -37,7 +37,7 @@ export class AuthService {
         })
       )
       .subscribe(user => {
-        this.userState.next(user);
+        this.userState.next(new User(user));
       });
   }
 
@@ -47,8 +47,8 @@ export class AuthService {
   }
 
   // returns current user data
-  get currentUserAuthState(): any {
-    return this.authenticated ? this.authState.getValue() : null;
+  get currentUser(): any {
+    return this.authenticated ? this.userState.getValue() : null;
   }
 
   // returns authstate observable

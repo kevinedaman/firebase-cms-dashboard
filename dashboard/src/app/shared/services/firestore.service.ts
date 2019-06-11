@@ -52,10 +52,11 @@ export class FirestoreService {
       ...doc,
       ...partial,
     };
-    return this.collection.doc(dto.id).set(partial);
+    return this.collection.doc(dto.id).set(dto);
   }
 
   public update(id, partial) {
+    partial.lastUpdatedOn = firestore.Timestamp.now();
     return this.collection.doc(id).update(partial);
   }
 
