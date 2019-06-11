@@ -9,6 +9,7 @@ import { MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 export class AlertComponent implements OnInit {
   public text: string;
   public title: string;
+  public single = false;
 
   constructor(
     public dialogRef: MatDialogRef<AlertComponent>,
@@ -16,12 +17,17 @@ export class AlertComponent implements OnInit {
   ) {
     this.text = data.text;
     this.title = data.title;
+    this.single = data.single;
   }
 
   ngOnInit() {
   }
 
-  close(): void {
+  cancel(): void {
     this.dialogRef.close();
+  }
+
+  confirm(): void {
+    this.dialogRef.close(true);
   }
 }

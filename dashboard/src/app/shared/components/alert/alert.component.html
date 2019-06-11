@@ -4,6 +4,16 @@
   {{ text }}
 </div>
 
-<div mat-dialog-actions class="dialog-actions">
-    <app-button (handleClick)="close()">Ok</app-button>
+<div *ngIf="!single" mat-dialog-actions class="dialog-actions">
+  <app-button (handleClick)="cancel()">Cancel</app-button>
+  <app-button
+    [accent]="true"
+    (handleClick)="confirm()"
+  >
+    Confirm
+  </app-button>
+</div>
+
+<div *ngIf="single" mat-dialog-actions class="dialog-actions">
+    <app-button (handleClick)="cancel()">Ok</app-button>
 </div>

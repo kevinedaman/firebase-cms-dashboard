@@ -8,6 +8,7 @@
       *ngIf="posts.length > 0" 
       [posts]="posts"
       (view)="handleView($event)"
+      (delete)="handleDelete($event)"
     >
     </app-posts-table>
   </div>

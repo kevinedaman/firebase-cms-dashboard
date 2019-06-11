@@ -18,4 +18,11 @@ export class AlertService {
       data: { text, title },
     });
   }
+
+  public confirm(text, title) {
+    return this.dialog.open(AlertComponent, {
+      width: '400px',
+      data: { text, title },
+    });
+  }
 }
